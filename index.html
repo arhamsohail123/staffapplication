@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3498db, #e67e22); /* Blue to Orange gradient */
+            color: #fff;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* White background with transparency */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333; /* Dark grey color for labels */
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+        }
+
+        button {
+            background-color: #3498db; /* Blue color for button */
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-container input {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+        }
+    </style>
+    <title> BiscootMC Staff Application</title>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="text-align: center; color: #333;">BiscootMC Staff Application</h1>
+    <form action="/submit" method="post">
+        <label for="username">1/12: What is your In-Game Username?</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="age">2/12: How old are you?</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="timezone">3/12: What time zone are you in? (e.g., EST, PST, CEST, etc.)</label>
+        <input type="text" id="timezone" name="timezone" required>
+
+        <label for="record">4/12: Are you able to record & have a working microphone?</label>
+        <select id="record" name="record" required>
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">I don't know</option>
+        </select>
+
+        <label for="device">5/12: What device do you mainly play on?</label>
+        <input type="text" id="device" name="device" required>
+
+        <label for="availability">6/12: What is your availability like? (Based on daily time, NOT weekly)</label>
+        <input type="text" id="availability" name="availability" required>
+
+        <label for="experience">7/12: Do you have any past staff experience?</label>
+        <input type="text" id="experience" name="experience">
+
+        <label for="why">8/12: Why should we choose you to be a part of our staff team? (Provide a detailed explanation. Minimum 50 words)</label>
+        <textarea id="why" name="why" rows="4" required></textarea>
+
+        <label for="motivation">9/12: What motivated you to apply for staff at BiscootMC? (Provide a detailed explanation. Minimum 50 words)</label>
+        <textarea id="motivation" name="motivation" rows="4" required></textarea>
+
+        <label for="qualities">10/12: What qualities should a staff member have? (List them)</label>
+        <input type="text" id="qualities" name="qualities" required>
+
+        <label for="vouch">11/12: Name a staff member that can vouch for you (Not required)</label>
+        <input type="text" id="vouch" name="vouch">
+
+        <label for="discord">12/12: Discord username:</label>
+        <input type="text" id="discord" name="discord" required>
+
+        <div class="checkbox-container">
+            <input type="checkbox" id="updates" name="updates" value="yes">
+            <label for="updates">I would like to receive updates about my application</label>
+        </div>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</div>
+
+</body>
+</html>
