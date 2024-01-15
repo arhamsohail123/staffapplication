@@ -122,7 +122,8 @@
         <button type="submit">Submit Application</button>
     </form>
 </div>
-<script>     let url='https://script.google.com/macros/s/AKfycbzIBs7CKuZWVJlpgxJmSoyTIrhc-DypPlK7TqfBdEz8EGPvr5D4vTQc2L6WcnH1jdRxLg/exec'
+<script>     
+    let url='https://script.google.com/macros/s/AKfycbxRhCIGpgZOebYsTumbfjo9OexBdN0TGnoM35knQXH--VEvyd83xuPygj7cFgAHiS-Kww/exec'
     let form=document.queryselector('#form'); 
     form.addEventlistener("submit",(e)=>{ 
         let d=new formdata (form);  
@@ -131,7 +132,8 @@
                 body:d 
     }).then((res)+>res.text()) 
         .then((finalres)=>console.log(finalres)) 
-        e.preventdefault(); </script>
+        e.preventdefault();
+</script>
 </body>
 
 </html>
